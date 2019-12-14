@@ -98,6 +98,30 @@ main {
     animation: slide 1.2s linear infinite;
 }
 
+#sydney {
+    background-image: url("../images/australian_soil.png");
+    background-size: contain;
+    background-repeat: repeat;
+
+    position: absolute;
+}
+
+#canberra {
+    background-image: url("../images/australian_soil.png");
+    background-size: contain;
+    background-repeat: repeat;
+
+    position: absolute;
+}
+
+#melbourne {
+    background-image: url("../images/australian_soil.png");
+    background-size: contain;
+    background-repeat: repeat;
+
+    position: absolute;
+}
+
 #honda_crv {
     background-image: url("../images/hondaCRV.png");
     background-size: contain;
@@ -107,7 +131,7 @@ main {
     
     height: 22.05vh;
     width: 22.05vh;
-    transform: translate3d(25vh, 52.5vh, 0);
+    transform: translate3d(10vw, 52.5vh, 0);
 }
 
 #kangaroo {
@@ -121,27 +145,11 @@ main {
     width: 22.05vh;
 }
 
-#coming_soon {
-    font-size: 300%;
+#score {
+    font-size: 200%;
     font-weight: bold;
 
-    margin: 7%;
-    
-    position: absolute;
-}
-
-#stats {
-    font-size: 150%;
-
-    margin: 2%;
-    
-    position: absolute;
-}
-
-#hit_test {
-    font-size: 150%;
-
-    margin: 4% 2%;
+    margin: 3%;
     
     position: absolute;
 }
