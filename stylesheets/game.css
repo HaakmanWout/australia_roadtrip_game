@@ -6,6 +6,7 @@ html, body {
 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     image-rendering: pixelated;
+    overflow: hidden;
 }
 
 header {
@@ -69,7 +70,7 @@ header {
 }
 
 main {
-    width: 200%;
+    width: 100%;
     height: 88.2%;
 }
 
@@ -97,11 +98,39 @@ main {
     animation: slide 2s linear infinite;
 }
 
+#honda_crv {
+    background-image: url("../images/hondaCRV.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    
+    height: 22.05vh;
+    width: 22.05vh;
+    transform: translate3d(25vh, 52.5vh, 0);
+}
+
 #coming_soon {
     font-size: 300%;
     font-weight: bold;
 
-    margin: 5%;
+    margin: 7%;
+    
+    position: absolute;
+}
+
+#stats {
+    font-size: 150%;
+
+    margin: 2%;
+    
+    position: absolute;
+}
+
+#hit_test {
+    font-size: 150%;
+
+    margin: 4% 2%;
     
     position: absolute;
 }
