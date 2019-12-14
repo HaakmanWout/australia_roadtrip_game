@@ -83,7 +83,7 @@ main {
     
     height: 88.2vh;
     width: 300%;
-    animation: slide 2s linear infinite;
+    animation: slide 1.2s linear infinite;
 }
 
 #australian_soil {
@@ -95,7 +95,7 @@ main {
     
     height: 88.2vh;
     width: 300%;
-    animation: slide 2s linear infinite;
+    animation: slide 1.2s linear infinite;
 }
 
 #honda_crv {
@@ -108,6 +108,17 @@ main {
     height: 22.05vh;
     width: 22.05vh;
     transform: translate3d(25vh, 52.5vh, 0);
+}
+
+#kangaroo {
+    background-image: url("../images/kangaroo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    
+    height: 22.05vh;
+    width: 22.05vh;
 }
 
 #coming_soon {
