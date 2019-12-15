@@ -21,7 +21,6 @@ header {
 
 #header_text {
     margin: 0 2%;
-    width: 60%;
     float: left;
 }
 
@@ -95,31 +94,52 @@ main {
     
     height: 88.2vh;
     width: 300%;
-    animation: slide 1.2s linear infinite;
+    animation: slide 0.8s linear infinite;
 }
 
 #sydney {
-    background-image: url("../images/australian_soil.png");
+    background-image: url("../images/sydney.png");
     background-size: contain;
-    background-repeat: repeat;
+    background-repeat: no-repeat;
 
     position: absolute;
+
+    font-size: 300%;
+    text-align: right;
+    color: white;
+
+    height: 75vh;
+    width: 75vh;
 }
 
 #canberra {
-    background-image: url("../images/australian_soil.png");
+    background-image: url("../images/canberra.png");
     background-size: contain;
-    background-repeat: repeat;
+    background-repeat: no-repeat;
 
     position: absolute;
+
+    font-size: 300%;
+    text-align: right;
+    color: white;
+
+    height: 75vh;
+    width: 75vh;
 }
 
 #melbourne {
-    background-image: url("../images/australian_soil.png");
+    background-image: url("../images/melbourne.png");
     background-size: contain;
-    background-repeat: repeat;
+    background-repeat: no-repeat;
 
     position: absolute;
+
+    font-size: 300%;
+    text-align: right;
+    color: white;
+
+    height: 75vh;
+    width: 75vh;
 }
 
 #honda_crv {
@@ -141,8 +161,8 @@ main {
 
     position: absolute;
     
-    height: 22.05vh;
-    width: 22.05vh;
+    height: 16vh;
+    width: 16vh;
 }
 
 #score {
@@ -150,6 +170,18 @@ main {
     font-weight: bold;
 
     margin: 3%;
+    
+    position: absolute;
+}
+
+#game_state {
+    font-size: 400%;
+    font-weight: bold;
+
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    text-align: center;
     
     position: absolute;
 }
