@@ -4,6 +4,12 @@ document.addEventListener("click", function(event) {
     }
 });
 
+document.addEventListener("touchstart", function(event) {
+    if (event.target.closest('#australian_soil') && posy >= 52.5) {
+        force = std_force;
+    }
+});
+
 document.body.onkeyup = function(event){
     if (event.keyCode == 32) {
         if (posy >= 52.5) {
