@@ -8,6 +8,9 @@ document.addEventListener("touchstart", function(event) {
     if (posy >= 52.5) {
         force = std_force;
     }
+    if (game_over) {
+        restart();
+    }
 });
 
 document.body.onkeyup = function(event){
@@ -112,26 +115,26 @@ function loop(timestamp) {
   
     lastRender = timestamp
     window.requestAnimationFrame(loop)
-  }
+}
 
-  function restart() {
-      game_over = false;
-      score = 0;
-      force = 0;
+function restart() {
+    game_over = false;
+    score = 0;
+    force = 0;
 
-      enemy_list = [];
+    enemy_list = [];
 
-      game_state_text.innerHTML = "";
+    game_state_text.innerHTML = "";
   
-      push_kangaroo(300);
-      push_kangaroo(450);
+    push_kangaroo(300);
+    push_kangaroo(450);
 
-      for (var i = 0; i < animated_elements.length; i++) {
-          animated_elements[i].style.webkitAnimationPlayState = 'running';
-      }
-  }
+    for (var i = 0; i < animated_elements.length; i++) {
+        animated_elements[i].style.webkitAnimationPlayState = 'running';
+    }
+}
 
-  restart();
+restart();
 
-  var lastRender = 0
-  window.requestAnimationFrame(loop)
+var lastRender = 0
+window.requestAnimationFrame(loop)
