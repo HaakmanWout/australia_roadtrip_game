@@ -1,11 +1,11 @@
 document.addEventListener("click", function(event) {
-    if (event.target.closest('#australian_soil') && posy >= 52.5) {
+    if (posy >= 52.5) {
         force = std_force;
     }
 });
 
 document.addEventListener("touchstart", function(event) {
-    if (event.target.closest('#australian_soil') && posy >= 52.5) {
+    if (posy >= 52.5) {
         force = std_force;
     }
 });
@@ -66,7 +66,7 @@ function draw() {
     score += 1;
 
     score_text.innerHTML = "Score: " + score;
-    honda_crv.style.transform = "translate3d(10vw, " + posy + "vh, 0)";
+    honda_crv.style.transform = "translate3d(5vw, " + posy + "vh, 0)";
 
     sydney.style.transform = "translate3d(" + (-score / 6) + "vw, 0, 0)";
     canberra.style.transform = "translate3d(" + (350 - score / 4) + "vw, 0, 0)";
@@ -74,11 +74,11 @@ function draw() {
 
     enemies.innerHTML = "";
     for (var i = 0; i < enemy_list.length; i++) {
-        enemy_list[i].posx -= 1;
+        enemy_list[i].posx -= 1.8;
         if (enemy_list[i].posx <= -20) {
-            enemy_list[i].posx = 120;
+            enemy_list[i].posx = 300;
         }
-        enemies.innerHTML += "<div id=\"" + enemy_list[i].enemy_name + "\" class=\"" + i + "\" style=\"transform:translate3d(" + enemy_list[i].posx + "vw, " + enemy_list[i].posy + "vh, 0)\"></div>";
+        enemies.innerHTML += "<div id=\"" + enemy_list[i].enemy_name + "\" class=\"" + i + "\" style=\"transform:translate3d(" + enemy_list[i].posx + "vh, " + enemy_list[i].posy + "vh, 0)\"></div>";
 
         var enemyBB = document.getElementsByClassName(i)[0].getBoundingClientRect();
         if (intersects(honda_crv.getBoundingClientRect(), enemyBB)) {
@@ -123,8 +123,8 @@ function loop(timestamp) {
 
       game_state_text.innerHTML = "";
   
-      push_kangaroo(190);
-      push_kangaroo(270);
+      push_kangaroo(300);
+      push_kangaroo(450);
 
       for (var i = 0; i < animated_elements.length; i++) {
           animated_elements[i].style.webkitAnimationPlayState = 'running';
